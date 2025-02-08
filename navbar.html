@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link 
+    rel="shortcut icon"
+    href="https://cdn-icons-png.flaticon.com/128/5894/5894365.png"
+    />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            padding: 10px 20px;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .navbar li {
+            position: relative;
+        }
+
+        .navbar img {
+            height: 37px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: azure;
+            padding: 10px;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(169, 235, 3);
+            color: black;
+            border-radius: 5px;
+        }
+
+        .search-bar {
+            position: relative;
+        }
+
+        .search-bar input {
+            height: 30px;
+            width: 280px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-bar i {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: gray;
+        }
+
+        /* Dropdown menu */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: black;
+            min-width: 150px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 10;
+        }
+
+        .dropdown-menu ul {
+            display: block;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .dropdown-menu ul li {
+            padding: 10px;
+        }
+
+        .dropdown-menu ul li a {
+            display: block;
+            color: azure;
+            padding: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown-menu ul li a:hover {
+            background-color: rgb(169, 235, 3);
+            color: black;
+            border-radius: 5px;
+        }
+
+        /* Show dropdown on hover */
+        .navbar li:hover .dropdown-menu {
+            display: block;
+        }
+
+    </style>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/7915/7915479.png" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><img src="https://ichef.bbci.co.uk/images/ic/1920x1080/p09xtmrp.jpg" alt="BBC"></li>
+            <li><a href="#"><i class="fa-solid fa-circle-user"></i>&nbsp; Sign in</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Reel</a></li>
+            <li><a href="#">Worklife</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Future</a></li>
+            <li>
+                <a href="#">More &nbsp;<i class="fa-solid fa-caret-down"></i></a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="#">Setting</a></li>
+                        <li><a href="#">Messages</a></li>
+                        <li><a href="#">Call</a></li>
+                        <li><a href="#">Report</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search"></i>
+        </div>
+    </nav>
+
+</body>
+</html>
